@@ -5,10 +5,10 @@
 -- GitHubリポジトリと連携するためのAPI統合を作成
 CREATE OR REPLACE API INTEGRATION git_api_integration
  API_PROVIDER = git_https_api
- API_ALLOWED_PREFIXES = ('https://github.com/kmotokubota/')
+ API_ALLOWED_PREFIXES = ('https://github.com/sfc-gh-kmotokubota/')
  ENABLED = TRUE;
 
 -- zero to Snowflake用のGitHubリポジトリを登録
 CREATE OR REPLACE GIT REPOSITORY zero_to_snowflake_jp
  API_INTEGRATION = git_api_integration
- ORIGIN = 'https://github.com/kmotokubota/zero-to-snowflake-jp.git';
+ ORIGIN = 'https://github.com/sfc-gh-kmotokubota/zero-to-snowflake-jp.git';
